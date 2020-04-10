@@ -26,7 +26,6 @@
 <link rel="icon" href="<?php bloginfo('template_url'); ?>/favicon.ico" type="image/x-icon">
 
 <link href='http://fonts.googleapis.com/css?family=Gudea:400,700,400italic|Sanchez:400italic,400' rel='stylesheet' type='text/css'>
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcj7KjtWqqcZB1t3nGoSwN6rHwCJ4qOMk"></script>
 
 <?php wp_head(); ?>
 </head>

@@ -1,0 +1,274 @@
+.container {
+
+	.content {
+
+	.details {
+		@include span-columns(12);
+		
+		h2 {
+		    @include sanchezItalic;
+		    color: $darkBlue;
+		    padding-left: 40px;
+	    }
+		
+		.acf_wysiwyg {
+			padding: 20px 50px 30px;
+
+			&:last-child {
+
+				@include media($mobile) {
+					padding-top: 5px;
+				}
+
+				P {
+					@include media($mobile) {
+						margin-bottom: 30px;
+					}
+				}
+			}
+
+	        @include media($mobile) {
+	          padding: 0 25px 20px;
+	        }
+
+	        h3 {
+	          @include sanchezItalic;
+	          color: $darkBlue;
+	        }
+
+		    h2 {
+			    @include sanchezItalic;
+			    color: $darkBlue;
+	            padding: 0;
+		    }
+
+	        p {
+		      float: left;
+	          line-height: 2.0;
+		      font-size: 15px;
+		      margin-bottom: 30px;
+		      clear: both;
+
+		        @include media($mobile) {
+		            margin-bottom: 0;
+		        }
+	        }
+
+		    ol {
+			    list-style-position: inside;
+		    }
+	    }
+
+		.section_header {
+
+			h2 {
+	          @include sanchezItalic;
+	          color: $darkBlue;
+	          padding: 5px 50px 10px;
+		      font-size: 30px;
+			  line-height: 1.2;
+
+	          @include media($mobile) {
+	            padding: 0;
+	          }
+	        }
+        }
+
+		.box_list {
+			padding: 30px 80px 15px;
+	        clear: both;
+
+	        @include media($mobile) {
+	            padding: 0 25px;
+	        }
+
+	        p {
+	            @include sanchezItalic;
+				color: $darkBlue;
+				font-size: 20px;
+				padding: 20px 20px 0;
+
+				@include media($mobile) {
+					margin-left: 15px;
+					padding: 10px 0 5px 18px;
+				}
+			}
+
+			ul {
+		        color: $darkBlue;
+		        margin-left: 15px;
+		        padding: 10px 20px 20px;
+
+		        @include media($mobile) {
+		            margin-left: 30px;
+		        }
+
+		        li {
+		            margin-bottom: 10px;
+		        }
+			}
+        }
+
+      .three_col_layout {
+	      @include media($mobile) {
+	      	width: 100%;
+	      }
+
+        .left, .middle, .right {
+          @include span-columns(4);
+
+          @include media($mobile) {
+            float: none;
+            width: 100%;
+	        margin-bottom: 40px;
+          }
+
+          p {
+            color: $modOrange;
+            text-align: center;
+
+            @include media($tablet) {
+              padding: 0;
+            }
+
+	        &:last-child {
+		        padding: 0 35px;
+	        }
+          }
+        }
+
+	    .right {
+
+		    @include media($mobile) {
+			    margin-bottom: 10px;
+		    }
+	    }
+      }
+
+      .bios {
+        display: block;
+        width: 100%;
+        height: auto;
+        padding: 10px 0;
+
+        .bio_img {
+          float: left;
+          padding-right: 25px;
+          padding-bottom: 20px;
+
+          @include media($mobile) {
+            float: none;
+	          padding-right: 0;
+          }
+
+          img {
+            width: 100%;
+          }
+        }
+
+        h3 {
+          @include sanchez;
+          font-size: 30px;
+          color: $black;
+          margin-bottom: 0;
+          padding-bottom: 15px;
+          margin-top: 20px;
+        }
+
+        span.title {
+          @include sanchez;
+          font-size: 18px;
+        }
+
+        span.number {
+          a {
+            color: $charcoal;
+          }
+        }
+
+        p {
+          padding-top: 50px;
+
+          @include media($mobile) {
+            padding-top: 35px;
+          }
+        }
+      }
+      
+      .content_button {
+	      @include span-columns(12);
+	      padding-left: 40px;
+	      padding-top: 10px;
+	      
+	      a {
+		      float: left;
+		      color: $white;
+		      padding: 10px 30px;
+		      border-radius: 5px;
+		      text-align: center;
+		      margin: 30px 0
+	      }
+	      
+      }
+      
+      .details_table {
+	      @include span-columns(12);
+	      background-color: $white;
+	      padding: 10px 15px;
+	      
+		.table_rows {
+			@include span-columns(12);
+		
+			.table_row {
+				@include span-columns(12);
+				display: flex;
+				align-items: stretch;
+				font-size: 16px;
+				&:nth-child(even){
+					background-color: #f0ecec;
+				}
+				
+				@include media($mobile){
+					display: block;
+				}
+			
+				.left_column {
+					@include span-columns(3);
+					@include sanchezItalic;
+					padding: 15px 30px 0;
+					color: $darkBlue;
+					
+					@include media($mobile){
+						@include span-columns(4);
+					}
+				}
+				
+				.right_column {
+					@include span-columns(9);
+					@include sanchez;
+					margin-right: 0;
+					padding: 15px 30px;
+					border-left: 1px solid $green;
+					
+					@include media($mobile){
+						@include span-columns(4);
+						border: none;
+					}
+				  
+				  ul {
+					  @include span-columns(12);
+				      margin-left: 15px;
+				      list-style: disc !important;
+				      
+				      li {
+					      background-color: none !important;
+				      }
+				  }
+				}
+			}
+		}
+      }
+      
+    }
+  }
+}

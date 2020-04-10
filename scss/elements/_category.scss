@@ -1,0 +1,173 @@
+.category {
+	
+	.hero {
+		
+		img {
+			width: 100%;
+		}
+		
+		
+		.hero_text {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			padding: 0 10%;
+			display: flex;
+			align-items: center;
+			//browser specific
+			display: -webkit-flex;
+			-webkit-align-items: center;
+			display: -ms-flexbox;
+			-ms-flex-align: center;
+			-ms-flex-pack: center;
+			-ms-flex-line-pack: center;
+			
+			
+			h1 {
+				@include sanchez;
+				color: $white;
+				font-size: 48px;
+				text-align: center;
+				line-height: 1;
+				width: 100%;
+				text-transform: uppercase;
+				
+				@include media($mobileNav){
+					font-size: 18px;
+				}
+			}
+		}
+		
+	} // hero
+	
+	.description {
+		text-align: center;
+		color: $charcoal;
+		margin-bottom: 15px;
+		
+		p {
+			@include sanchez;
+			margin: 10px;
+			padding: 0 25px;
+			font-size: 18px;
+			line-height: 1.6;
+		}
+		
+		img {
+			width: 100%;
+		}
+		
+	}
+	
+	.sub_pages {
+		list-style: none;
+		
+		li {
+			@include span-columns(12);
+			float: left;
+			background: url('../images/white-tab.png') no-repeat;
+			background-size: cover;
+			padding: 10px 15px;
+			margin-bottom: 15px;
+			
+			a {
+				@include span-columns(12);
+				display: block;
+				height: 100%;
+				
+				.icon {
+					@include span-columns(1.5);
+					margin-right: 40px;
+				}
+				
+				.tab_text {
+					@include span-columns(10);
+					margin-right: 0;
+				
+					h2 {
+						display: inline-block;
+						@include sanchez;
+						font-size: 48px;
+						margin-top: 5px;
+						margin-bottom: 0px;
+						width: 100%;
+						line-height: 1;
+					}
+					
+					p {
+						display: inline-block;
+						@include gudea;
+						color: $gray;
+						font-size: 18px;
+						padding-top: 0;
+					}
+					
+				}
+				
+				.learn_more {
+					position: absolute;
+					right: 0;
+					top: 28%;
+					margin-right: 20px;
+				}	
+				
+			}
+			
+			&:hover {
+					
+				.green_scheme {
+					color: $hoverGreen;
+				}
+				
+				.blue_scheme {
+					color: $hoverBlue;
+				}
+				
+				.orange_scheme {
+					color: $hoverOrange;
+				}
+				
+				.purple_scheme {
+					color: $hoverPurple;
+				}
+				
+				.dark_blue_scheme {
+					color: $blue;
+				}
+				
+			}
+			
+		}
+		
+		.green_scheme {
+			color: $green;
+		}
+		
+		.blue_scheme {
+			color: $blue;
+		}
+		
+		.orange_scheme {
+			color: $orange;
+		}
+		
+		.purple_scheme {
+			color: $purple;
+		}
+		
+		.dark_blue_scheme {
+			color: $darkBlue;
+		}
+		
+	}
+	
+	.category_content {
+		clear: both;
+		
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+}

@@ -1,0 +1,257 @@
+.locations {
+	
+	form {
+		display: block;
+		text-align: center;
+		margin-top: 5px;
+		width: 100%;
+		padding: 0 20px;
+	}
+	
+	#address_search {
+		display: inline-block;
+		padding-top: 5px;
+		padding-left: 45px;
+		width: 100%;
+
+		@include media($break1000) {
+			padding-left: 0;
+		}
+	}
+	
+	#addy_in_address {
+		@include span-columns(6.4);
+		padding-left: 0;
+		margin-right: 6%;
+
+		@include media($break900) {
+			@include span-columns(8);
+		}
+	}
+	
+	.search_item {
+		@include span-columns(4.4);
+		clear: none !important;
+		display: block;
+		float: left !important;
+
+		@include media($break900) {
+			@include span-columns(8);
+		}
+		
+		input[type="text"] {
+			width: 100% !important;
+			height: 40px;
+			padding: 5px 20px;
+			min-width: 340px;
+		}
+		
+		#addy_in_radius {
+			@include span-columns(4.6);
+			@include gudea;
+			display: inline-flex;
+			float: left;
+			padding-top: 6px;
+			margin-right: 14%;
+			//browser specific
+			display: -webkit-inline-flex;
+			display: -ms-inline-flexbox;
+
+			@include media($break900) {
+				display: block;
+				width:  50%;
+				margin-right: 0;
+			}
+			
+			label {
+				display: none;
+			}
+			
+			#radiusSelect {
+				width: 120px;
+				min-width: 100px;
+				background: $lightGray;
+				color: $charcoal;
+				height: 38px;
+				border: none;
+				display: -ms-inline-flexbox;
+			}
+		}
+		
+		#radius_in_submit {
+			@include span-columns(5.6);
+			@include gudea;
+			float: left !important;
+			padding-top: 5px;
+			
+			input[type="submit"] {
+				padding: 10px 20px;
+				color: $white;
+				border-radius: 5px;
+				border: none !important;
+			}
+		}
+	}
+}
+
+#map {
+	margin: 10px auto;
+	border-bottom: solid 1px #CCCCCC;
+	
+	.gm-style {
+		border: solid 5px $white;
+	}
+
+	@include media($mobile) {
+		width: 100% !important;
+		height: 220px !important;
+	}
+}
+
+#slp_tagline {
+	margin: auto !important;
+}
+
+
+.results_wrapper {
+	@include sanchez;
+	
+	.gray_bar {
+		display: inline-block;
+	}
+	
+	.results_entry {
+		padding-bottom: 0;
+	}
+	
+	.results_row_left_column {
+		@include span-columns(7);
+		padding-left: 40px;
+
+		@include media($mobile) {
+			@include span-columns(4);
+			padding-left: 10px;
+		}
+
+		h1 {
+			line-height: 1.2;
+
+			.location_name {
+				font-weight: 100;
+			}
+
+			@include media($mobile) {
+				font-size: 30px;
+				margin-bottom: 5px;
+			}
+		}
+
+		.slp_result_phone_mobile {
+			display: none;
+
+			@include media($mobile) {
+				display: block;
+				font-size: 18px;
+			}
+		}
+	}
+	
+	.results_row_right_column {
+		@include span-columns(3.5);
+		padding-top: 15px;
+
+		.slp_result_phone {
+
+			@include media($mobile) {
+				display:  none;
+			}
+		}
+	}
+	
+	.location_name {
+		color: $modOrange !important;
+	}
+	
+	.expanded {
+		display: none;
+
+		@include media($mobile) {
+			display: block;
+		}
+		
+		.slp_result_hours {
+			display: block;
+			margin-top: 20px;
+		}
+	}
+		
+	.bottom_row {
+		@include span-columns(12);
+		margin-top: 20px;
+
+		@include media($mobile) {
+			margin-top: 0;
+		}
+
+		.original {
+
+			@include media($mobile) {
+				padding-left: 12px;
+				font-size: 15px;
+			}
+		}
+		
+		.expand_click {
+			@include span-columns(8);
+			color: $blue !important;
+			padding-left: 40px;
+
+			@include media($mobile) {
+				display: none;
+			}
+			
+			&.close {
+				color: $gray !important;
+			}
+		}
+
+		.expanded {
+
+			@include media($mobile) {
+				display:  none;
+			}
+		}
+
+		.location_directions {
+			@include span-columns(4);
+			color: $gray;
+
+			@include media($mobile) {
+				@include span-columns(4);
+			}
+
+			.location_distance {
+				float: left;
+
+				&:after {
+					content: '|';
+					display: inline-block;
+					padding: 0 8px;
+				}
+			}
+
+			.slp_result_contact {
+				width: inherit;
+				float: left;
+
+				@include media($mobile) {
+					width:  25%;
+				}
+
+				a {
+					color: $gray !important;
+				}
+			}
+		}
+	}
+}

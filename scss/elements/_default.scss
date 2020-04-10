@@ -1,0 +1,100 @@
+header.default {
+  @extend .contact;
+}
+
+section.default {
+  .content {
+
+    @include media($tablet) {
+      float: none;
+      width: 100%;
+    }
+
+      h5 {
+        @include sanchez;
+        font-size: 20px;
+      }
+
+      p {
+        margin-bottom: 40px;
+      }
+
+      span.orange_text {
+        color: orange;
+      }
+
+      .file_info {
+        padding-top: 30px;
+        padding-bottom: 25px;
+        margin-bottom: 0;
+      }
+
+      .pdf {
+        @include span-columns(2.7);
+        display: block;
+        color: $white;
+        padding: 10px;
+        text-align: center;
+        border-radius: 4px;
+        text-decoration: none;
+
+        @include media($mobile) {
+          @include span-columns(3.5);
+        }
+      }
+
+      a {
+        color: $darkBlue;
+        text-decoration: underline  ;
+      }
+  }
+  .sidebar {
+    @include media($tablet) {
+      float: none;
+      width: 100%;
+    }
+  }
+}
+
+.full_pg {
+  float: none !important;
+  width: 100% !important;
+
+    .not-found {
+
+      h1 {
+        text-align: center;
+        font-size: 32px;
+        line-height: 1.2;
+      }
+
+      .not_found_content {
+        text-align: center;
+
+        input[type="search"] {
+          padding: 10px;
+          margin: 10px 0;
+          width: 25%;
+
+          @include media($mobile) {
+            width: 80%;
+          }
+        }
+
+        .fa-search {
+          font-size: 18px;
+          position: relative;
+          right: 40px;
+        }
+
+        input[type="submit"] {
+        display: none;
+      }
+
+        label {
+          display: none;
+        }
+      }
+
+    }
+}

@@ -1,0 +1,122 @@
+.blog {
+	.sidebar {
+		padding-bottom: 15px;
+
+		.widget_nav_menu {
+			margin-bottom: 0;
+		}
+	}
+	
+	h1 {
+		line-height: 1;
+		color: $black;
+	}
+	
+	.content {
+		padding-left: 30px;
+
+		@include media($mobile) {
+			padding: 0;
+		}
+	}
+	
+	.date {
+		color: $lightGray;
+		margin-top: 20px;
+		margin-bottom: 0;
+	}
+	
+	h2 {
+		line-height: 40px;
+		color: $black;
+		
+		a {
+			color: $black;
+		}
+	}
+	
+	p {
+		margin-bottom: 20px;
+	}
+	
+	.read_more {
+		display: block;
+		color: $modOrange;
+		margin: 20px 0;
+	}
+	
+	h3 {
+		float: left;
+		font-size: 48px;
+		color: $white;
+		text-transform: uppercase;
+		display: inline-block;
+		margin: 0;
+
+		@include media($mobile) {
+			font-size: 26px;
+		}
+	}
+}
+
+.blog_footer {
+	margin: 40px 0 80px;
+	
+	p {
+		margin-bottom: 10px;
+		
+		a {
+			color: $charcoal;
+		}
+	}
+	
+	.return_to_articles {
+		display: inline-block;
+		margin: 30px 20px;
+		color: $white;
+		padding: 10px;
+		border-radius: 5px;
+	}
+}
+
+
+.blog_single_content {
+
+	img {
+		float: left;
+		margin: 20px 20px 20px 0;
+
+		@include media($mobile) {
+			@include span-columns(4);
+			float: none;
+			margin: 20px 0;
+		}
+	}
+
+	blockquote {
+		@include span-columns(3);
+		float: left;
+		padding: 0 15px 10px;
+		margin: 20px 20px 20px 0;
+		border-top: 5px solid $modOrange;
+		border-bottom: 5px solid $modOrange;
+
+		@include media($tablet) {
+			@include span-columns(8);
+			float: none;
+		}
+
+		h4 {
+			@include sanchezItalic;
+			color: $modOrange;
+			margin-bottom: 20px;
+			font-weight: 400;
+		}
+
+		p {
+			margin-bottom: 0;
+			margin-top: 10px;
+			font-size: smaller;
+		}
+	}
+}

@@ -1,0 +1,638 @@
+#wpadminbar {
+	
+	@include media($mobile){
+		top: -46px;
+	}
+} 
+
+#global_header {
+	padding: 10px 0;
+	background: $white;
+
+	.container {
+
+		@include media($break750) {
+			padding: 0 10px;
+		}
+	}
+
+	
+	#logo {
+		@include span-columns(2.8);
+		margin: 0;
+		padding: 15px 0;
+		
+		@include media($break900){
+			@include span-columns(8);
+			text-align: center;
+		}
+		
+		@include media($mobileNav){
+			@include span-columns(7);
+			text-align: left;
+		}
+		
+		a {
+			display: inline-block;
+			
+			img {
+				display: block;
+				width: 100%;
+				padding-right: 30px;
+				
+				@include media($tablet){
+					display: inline-block;
+					padding-right: 0px;
+				}
+			}
+			
+		}	
+	}
+	
+	.mobile_menu_btn {
+		display: none;
+		
+		@include media($mobileNav){
+			display: block;
+			float: left;
+			height: 50px;
+			width: 22px;
+			margin: 15px 0;
+			background: url('../images/mobile_menu_icon.png') no-repeat center;
+		}
+	}
+
+	nav {
+		@include span-columns(9.2);
+		
+		@include media($break900){
+			@include span-columns(8);
+		}
+		
+		@include media($mobileNav){
+			display: none;
+		}
+	
+		ul {
+			@include sanchez;
+			list-style: none;
+			float: right;
+			
+			@include media($break900){
+				float: none;
+				text-align: center;
+			}
+	
+			li {
+				float: left;
+				margin-left: 29px;
+				
+				@include media($break1200){
+					margin-left: 15px;
+				}
+				
+				@include media($break1150){
+					margin-left: 10px;
+				}
+				
+				@include media($break1000){
+					margin-left: 5px;
+					margin-right: 5px;
+				}
+				
+				@include media($break900){
+					float: none;
+					display: inline-block;
+					margin-left: 15px;
+					margin-right: 10px;
+				}
+				
+				@include media($tablet){
+					float: none;
+					display: inline-block;
+					margin-left: 0px;
+					margin-right: 2px;
+				}
+
+				&:last-child {
+					margin-right: 0;
+				}
+				
+				&.hovered {
+					
+					&.green_menu {
+						background: url(../images/green-dot-circle.png) no-repeat;
+						background-position: left center;
+						
+						a {
+							color: $hoverGreen;
+						}
+					}
+					
+					&.blue_menu {
+						background: url(../images/blue-dot-circle.png) no-repeat;
+						background-position: left center;
+						
+						a {
+							color: $blue;
+						}
+					}
+					
+					&.orange_menu {
+						background: url(../images/orange-dot-circle.png) no-repeat;
+						background-position: left center;
+						
+						a {
+							color: $orange;
+						}
+					}
+					
+					
+					&.purple_menu {
+						background: url(../images/purple-dot-circle.png) no-repeat;
+						background-position: left center;
+
+						a {
+							color: $purple;
+						}
+					}
+				}
+				
+				&.active_hover {
+					
+					img {
+						display: block;
+					}
+					
+					&.green_menu {
+						background: url(../images/green-dot-circle.png) no-repeat;
+						background-position: left center;
+						
+						a {
+							color: $hoverGreen;
+						}
+					}
+					
+					&.blue_menu {
+						background: url(../images/blue-dot-circle.png) no-repeat;
+						background-position: left center;
+						
+						a {
+							color: $blue;
+						}
+					}
+					
+					&.orange_menu {
+						background: url(../images/orange-dot-circle.png) no-repeat;
+						background-position: left center;
+						
+						a {
+							color: $orange;
+						}
+					}
+					
+					
+					&.purple_menu {
+						background: url(../images/purple-dot-circle.png) no-repeat;
+						background-position: left center;
+						
+						a {
+							color: $purple;
+						}
+					}
+				}
+	
+				a {
+					display: inline-block;
+					color: $charcoal;
+					text-transform: uppercase;
+					padding: 25px 0 25px 30px;
+					font-size: 15px;
+					
+					@include media($break1150){
+						font-size: 13px;
+					}
+					
+					@include media($break950){
+						font-size: 12px;
+					}
+					
+					@include media($break900){
+						font-size: 12px;
+					}
+				}
+				
+				&.green_menu {
+					background: url(../images/green-dot.png) no-repeat;
+					background-position: left center;
+					
+					.dropdown {
+						border-top: 5px solid $green;
+						
+						ul {
+						
+							.parent {
+								@include gudeaBold;
+								text-transform: uppercase;
+								margin-left: 0;
+								
+								a {
+									color: $hoverGreen;
+									letter-spacing: 1px;
+								}
+							}
+							
+							li {
+								@include gudea;
+								color: $black;
+								margin-left: 10px;
+								text-transform: none;
+								
+								a {
+									padding: 5px;
+									font-size: 14px;
+								}
+							}
+						}
+					}
+				}
+				
+				&.blue_menu {
+					background: url(../images/blue-dot.png) no-repeat;
+					background-position: left center;
+				}
+				
+				&.orange_menu {
+					background: url(../images/orange-dot.png) no-repeat;
+					background-position: left center;
+				}
+				
+				&.purple_menu {
+					background: url(../images/purple-dot.png) no-repeat;
+					background-position: left center;
+				}
+				
+				img {
+					display: none;
+					position: absolute;
+					bottom: -10px;
+					right: -12px;
+					
+					@include media($tablet){
+						width: 30px;
+						right: 0;
+					}
+				}
+			}
+		}
+	}
+	
+	/* ==================== 
+	
+		Dropdowns
+		
+	======================= */
+	
+	.green_dropdown {
+		display: none;
+		position: absolute;
+		float: left;
+		background-color: $white;
+		z-index: 10;
+		left: 0;
+		width: 100%;
+		margin-left: 0;
+		padding-top: 15px;
+		margin-top: 10px;
+		box-sizing: border-box;
+		border-top: 5px solid $green;
+		-webkit-box-shadow: 0px 10px 20px -5px rgba(0,0,0,0.35);
+		-moz-box-shadow: 0px 10px 20px -5px rgba(0,0,0,0.35);
+		box-shadow: 0px 10px 20px -5px rgba(0,0,0,0.35);
+		
+		img {
+			@include span-columns(2.75);
+			margin-right: 5%;
+			margin-left: 2%;
+			margin-top: 2%;
+			
+			@include media($tablet){
+				display: none;
+			}
+		}
+		
+		.menu_container {
+			@include clearfix;
+			margin: 0 auto;
+			
+			ul {
+				@include span-columns(3);
+				list-style: none;
+				display: block;
+				margin-right: 1%;
+				
+				@include media($tablet){
+					@include span-columns(2.5);
+				}
+				
+				&:last-child{
+					margin-right: 0;
+				}
+				
+				.parent {
+					@include gudeaBold;
+					text-transform: uppercase;
+					margin: 5px 0;
+					
+					a {
+						color: $hoverGreen;
+					}
+				}
+				
+				li {
+					@include gudea;
+					color: $black;
+					margin-left: 10px;
+					text-transform: none;
+					
+					a {
+						padding: 0px;
+						font-size: 14px;
+						color: $charcoal;
+					}
+				}
+			}
+		}
+		
+		.green_dropdown_caption {
+			@include sanchezItalic;
+			width: 100%;
+			background-color: $green;
+			color: $white;
+			font-size: 18px;
+			text-align: center;
+			margin: 25px 0 10px;
+			padding: 10px 20px;
+			position: relative;
+			bottom: 0;
+		}
+		
+	}
+	
+	.blue_dropdown {
+		@extend .green_dropdown;
+		border-top: 5px solid $blue;
+		
+		ul {
+			
+			.parent {
+				
+				a {
+					color: $blue !important;
+				}
+			}
+		}
+		
+		.blue_dropdown_caption {
+			@extend .green_dropdown_caption;
+			background-color: $blue;
+		}
+	}
+	
+	.orange_dropdown {
+		@extend .green_dropdown;
+		border-top: 5px solid $orange;
+		
+		ul {
+			
+			.parent {
+				
+				a {
+					color: $orange !important;
+				}
+			}
+		}
+		
+		.orange_dropdown_caption {
+			@extend .green_dropdown_caption;
+			background-color: $orange;
+		}
+	}
+	
+	.purple_dropdown {
+		@extend .green_dropdown;
+		border-top: 5px solid $purple;
+		
+		ul {
+			
+			.parent {
+				
+				a {
+					color: $purple !important;
+				}
+			}
+		}
+		
+		.purple_dropdown_caption {
+			@extend .green_dropdown_caption;
+			background-color: $purple;
+		}
+	}
+	
+}
+
+
+/* ==================== 
+	
+	Top Header Section
+	
+======================= */
+
+.top_header {
+	display: block;
+	border-bottom: 1px solid $gray;
+	
+	.top_header_links {
+		@include span-columns(7.5);
+		list-style: none;
+		text-align: right;
+		
+		@include media($break750) {
+			display: none;
+		}
+	
+		li {
+			display: inline-block;
+			margin-right: 35px;
+			padding: 15px 0;
+			
+			@include media($break1150){
+				margin-right: 20px;
+			}
+			
+			@include media($break900){
+				margin-right: 15px;
+				float: left;
+			}
+			
+			@include media($tablet){
+				margin-right: 10px;
+			}
+			
+			@include media($mobileNav){
+				display: block;
+				float: left;
+			}
+
+			&:last-child {
+
+				@include media($break900){
+					margin-right: 0;
+				}
+			}
+			
+			a {
+				@include gudeaBold;
+				display: block;
+				height: 100%;
+				width: 100%;
+				text-transform: uppercase;
+				color: $gray;
+				font-size: 14px;
+				letter-spacing: 1px;
+				
+				@include media($break1000){
+					font-size: 12px;
+				}
+			}	
+		}
+	}
+	
+	.mobile_header_links {
+		@include span-columns(8);
+		list-style: none;
+		text-align: right;
+		display: none;
+		
+		@include media($break750){
+			@include span-columns(8);
+			display: block;
+		}
+		
+		li {
+			display: block;
+			margin-right: 35px;
+			padding: 15px 0;
+			
+			@include media($break750){
+				display: block;
+				float: right;
+			}
+			
+			a {
+				@include gudeaBold;
+				display: block;
+				height: 100%;
+				width: 100%;
+				text-transform: uppercase;
+				color: $gray;
+				font-size: 14px;
+				letter-spacing: 1px;
+			}	
+		}
+	}
+	
+	form {
+		@include span-columns(2);
+		position: relative;
+		@include gudea;
+		margin-right: 5px;
+		
+		@include media($break750){
+			display: none;
+		}
+		
+		input {
+			padding: 5px;
+			margin: 10px 0;
+			width: 100%;
+		}
+		
+		.fa-search {
+			position: absolute;
+			bottom: 18px;
+		  	left: 144px;
+			font-size: 18px;
+		  	color: $charcoal;
+		}
+
+	  	.search_icon {
+		  background: url('../images/search_icon.png') no-repeat right center;
+		  width: 24px;
+		  height: 25px;
+		  border: none;
+		  position: absolute;
+		  bottom: 4px;
+		  right: 5px;
+		}
+	}
+
+	.account_dropdown {
+		@include span-columns(2.5);
+
+		@include media($break900) {
+			width: 20%;
+		}
+	}
+
+	.access_account {
+		height: 45px;
+
+		@include media($break900){
+			margin-top: 8px;
+			line-height: 35px;
+			font-size: 14px;
+		}
+
+		@include media($tablet){
+			line-height: 20px;
+			font-size: 14px;
+		}
+
+		@include media($break750){
+			display: none;
+		}
+
+		&:hover {
+			cursor: pointer;
+		}
+
+		&.dd-container {
+			width: 100% !important;
+			max-width: 216px;
+			font-size: 14px;
+			margin: 4px auto;
+
+			.dd-options {
+				width: 100% !important;
+				max-width: 216px;
+
+			}
+
+			.dd-select {
+
+				.dd-selected {
+					padding-right: 14px;
+
+					@include media($tablet) {
+						padding-right: 10px;
+					}
+
+				}
+			}
+		}
+		
+	}
+	
+}
+

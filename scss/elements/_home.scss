@@ -1,0 +1,552 @@
+.home_page {
+	text-align: center;
+	
+	.container {
+		clear: both;
+		
+		@include media($mobile) {
+			padding: 0;
+		}
+	}
+	
+	a {
+		color: $darkBlue;
+		
+		&.read_more {
+			@include gudea;
+			display: block;
+			color: $modOrange;
+			margin-bottom: 20px;
+		}
+		
+		&.gray_link {
+			@include gudea;
+			color: darken(#b7b7b7, 20%);
+			padding-left: 10px;
+		}
+	}
+	
+	.content {
+		@include span-columns(12);
+		
+		.gray_line {
+			display: inline-block;
+			
+			@include media($mobile) {
+				width: 90%;
+			}
+		}
+		
+		@include media($mobile) {
+			padding: 0;
+		}
+	}
+	
+	.top_content {
+		@include span-columns(12);
+		margin-right: 0;
+		display: flex;
+		//browser specific
+		display: -webkit-flex;
+		display: -ms-flexbox;
+
+		@include media($tablet) {
+			display: block;
+		}
+
+		.flexslider {
+			@include span-columns(9);
+			margin: 0;
+			border: 0;
+			display: block;
+			float: left;
+			height: 100%;
+
+			@include media($tablet) {
+				@include span-columns(8);
+				float: none;
+			}
+
+			.flex-direction-nav {
+				display: none;
+			}
+
+			.flex-control-nav {
+				bottom: 0;
+
+				a {
+					background: $gray;
+
+					&.flex-active {
+						background: $black;
+					}
+				}
+			}
+
+			.slides {
+
+				.hero_text {
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					top: 0;
+					padding: 0 5%;
+					display: flex;
+					align-items: center;
+					//browser specific
+					display: -webkit-flex;
+					-webkit-align-items: center;
+					display: -ms-flexbox;
+					-ms-flex-align: center;
+
+
+					h1 {
+						color: $white;
+						display: block;
+						line-height: 1.2;
+						z-index: 1;
+						font-size: 48px;
+						text-transform: uppercase;
+						width: 100%;
+
+						@include media($mobile) {
+							font-size: 30px;
+						}
+					}
+				}
+
+				img {
+					display: block;
+					width: 100%;
+					height: auto;
+				}
+			}
+		}
+		
+		.access_account_section {
+			@include sanchez;
+			width: 26%;
+			margin: 0;
+			display: flex;
+			background: url('../images/access-account-background.jpg') no-repeat;
+			background-size: 100% 100%;
+			text-align: center;
+			float: left;
+			padding: 0 20px;
+			//browser specific
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			-ms-flex-align: center;
+
+			
+			@include media($tablet) {
+				@include span-columns(8);
+				float: none;
+				display: block;
+				margin: 0;
+				padding: 20px 0 40px;
+				background-size: cover;
+			}
+			
+			@include media($mobile) {
+				display: none;
+			}
+			
+			.account_content {
+				float: none;
+				margin: auto;
+				
+				h2 {
+					float: none;
+					color: $darkBlue;
+					font-weight: 100;
+					margin: 0 auto 25px;
+					font-size: 22px;
+
+					@include media($tablet) {
+						padding-top: 20px;
+					}
+				}
+				
+				.apply_account {
+					display: block;
+					text-decoration: underline;
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}
+
+.three_column_section {
+	@include span-columns(12);
+	margin: 40px 0;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	padding: 0 10%;
+	max-height: 396px;
+	//browser specific
+	display: -webkit-flex;
+	-webkit-flex-direction: row;
+	-webkit-flex-wrap: wrap;
+	display: -ms-flexbox;
+	-ms-flex-direction: row;
+	-ms-flex-wrap: wrap;
+
+
+	@include media($break1150) {
+		padding: 0 5%;
+	}
+
+	@include media($break1000) {
+		padding: 0;
+	}
+	
+	@include media($tablet) {
+		padding: 0;
+		max-height: none;
+	}
+	
+	@include media($mobile) {
+		@include span-columns(4);
+		padding: 0;
+		margin: 0;
+	}
+	
+	.column {
+		@include span-columns(4);
+		display: flex;
+		max-height: 396px;
+		//browser specific
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		
+		@include media($tablet) {
+			width: 48%;
+		}
+		
+		@include media($mobile) {
+			@include span-columns(4);
+			display: block;
+			max-height: none;
+		}
+		
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+		
+		&:nth-child(2) {
+			
+			@include media($tablet) {
+				display: flex;
+				margin-right: 0;
+				//browser specific
+				display: -webkit-flex;
+				display: -ms-flexbox;
+			}
+			
+			@include media($mobile) {
+				display: block;
+			}
+		}
+		
+		&.column_copy {
+			@include sanchez;
+			display: block;
+			background-color: $white;
+			padding: 10px 15px;
+			text-align: left;
+
+			@include media($mobile) {
+				margin-bottom: 20px;
+			}
+
+			.gray_bar {
+				margin-bottom: 10px;
+			}
+			
+			.column_header {
+				@include clearfix;
+				background: url('../images/gray-bar.png') no-repeat center bottom;
+				margin-bottom: 15px;
+			}
+			
+			h4 {
+				@include span-columns(6);
+				background: $lightGray;
+				color: $white;
+				padding: 10px 16px;
+				border-radius: 5px 5px 0 0;
+				text-transform: uppercase;
+				font-size: 12px;
+				font-weight: 100;
+				float: left;
+				text-align: center;
+				margin-top: 5px;
+				margin-bottom: 4px;
+
+				&.twitter_header {
+					display: none;
+				}
+
+				&.news_header {
+					padding: 10px 17px;
+				}
+
+				&.active {
+					background: $modBlue;
+				}
+
+				&:hover {
+					cursor: pointer;
+				}
+			}
+
+			.column_wrap {
+
+				&.twitter {
+					display: none;
+
+					@include media($mobile) {
+						padding-bottom: 25px;
+					}
+				}
+
+				.column_content {
+					padding: 0 10px;
+					overflow-y: scroll;
+
+					&.news_content {
+						max-height: 250px;
+
+						@include media($mobile) {
+							max-height: none;
+						}
+
+					}
+
+					&.twitter_content {
+
+						.twitter-timeline {
+							height: auto;
+							min-height: 186px;
+
+							@include media($mobile) {
+								width: 100% !important;
+								min-height: 240px;
+							}
+						}
+					}
+
+					p {
+						@include gudea;
+						color: darken(#b7b7b7, 20%);
+						padding-top: 0;
+					}
+				}
+			}
+		}
+		
+		&:last-child {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			//browser specific
+			display: -webkit-flex;
+			-webkit-flex-direction: column;
+			-webkit-flex-wrap: wrap;
+			display: -ms-flexbox;
+			-ms-flex-direction: column;
+			-ms-flex-wrap: wrap;
+			
+			@include media($tablet) {
+				display: block;
+				width: 100%;
+			}
+		}
+		
+		.image_block {
+			height: 47%;
+			width: 100%;
+			
+			@include media($tablet) {
+				@include span-columns(4);
+				margin-top: 15px;
+			}
+			
+			@include media($mobile) {
+				@include span-columns(4);
+			}
+			
+			img {
+				height: 100%;
+				
+				@include media($tablet) {
+					height: auto;
+					width: 100%;
+				}
+			}
+			
+			&:first-child {
+				clear: both;
+				top: 0;
+				position: absolute;
+				margin-bottom: 30px;
+				
+				@include media($tablet) {
+					position: relative;
+					margin-bottom: 0;
+					margin-right: 15px;
+				}
+			}
+			
+			&:last-child {
+				position: absolute;
+				bottom: 0;
+				
+				@include media($tablet) {
+					position: relative;
+				}
+			}
+			
+			p {
+				height: 100%;
+			}
+
+			.wp_cta_container {
+				height: 100%;
+
+				.inbound-cta-container {
+					height: inherit;
+
+					#blank-cta-template {
+						height: inherit;
+
+						a {
+							display: block;
+							height: inherit;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.full_width_section {
+	@include span-columns(12);
+	padding: 20px 40px;
+	font-size: 18px;
+	
+	@include media($mobile) {
+		padding: 10px 20px;
+		font-size: 17px;
+	}
+	
+	p {
+		line-height: 1.8;
+	}
+	
+	&.image {
+		margin-top: 40px;
+		
+		@include media($mobile) {
+			padding: 0;
+			margin-top: 15px;
+		}
+		
+		img {
+			display: block;
+			height: auto;
+			width: 100%;
+		}
+	}
+}
+
+.access_account {
+	font-size: 16px;
+	display: block;
+	color: $white;
+	border: none;
+	height: 48px;
+
+	&.dd-container {
+		@include gudea;
+		width: 100% !important;
+		max-width: 252px;
+		font-size: 16px;
+		float: none;
+		margin: 0 auto 10px;
+
+		.dd-options {
+			width: 100% !important;
+			max-width: 252px;
+			border: none;
+			background: darken(#33ccff, 15%) !important;
+
+			a {
+				background: none !important;
+				color: $white;
+				text-align: left;
+				line-height: 1.2;
+
+				&:hover {
+					background: $white !important;
+					color: darken(#33ccff, 15%);
+				}
+			}
+
+			.dd-desc {
+				display: none;
+			}
+		}
+
+		.dd-select {
+			width: 100% !important;
+			border: none;
+			height: 100%;
+			border-radius: 5px;
+			padding: 0 30px 0 0;
+
+			.dd-pointer {
+				width: 12px;
+				right: 15px;
+				margin-top: -6px;
+				top: 50%;
+
+				&.dd-pointer-down {
+					border-top: solid 10px $darkBlue;
+
+					&.dd-pointer-up {
+						border-bottom: solid 10px $darkBlue !important;
+					}
+				}
+
+				&:before {
+					content:'';
+					background: url('../images/dark-blue-line.png') no-repeat;
+					width: 1px;
+					height: 24px;
+					right: 20px;
+					bottom: -7px;
+					position: absolute;
+				}
+			}
+
+			.dd-selected {
+				color: $white;
+				padding-top: 14px;
+				line-height: 1;
+				text-align: center;
+				font-weight: normal;
+
+				.dd-desc {
+					display: none;
+				}
+			}
+		}
+	}
+}

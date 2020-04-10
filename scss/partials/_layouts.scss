@@ -1,0 +1,26 @@
+// general wrapper class
+.container {
+	@extend %post;
+	max-width: 1230px;
+	padding: 0 20px;
+
+	.content {
+		@include span-columns(9);
+		padding: 20px 0;
+		
+		@include media($tablet){
+			@include span-columns(8);
+		}
+		
+	}
+	.sidebar {
+		@include span-columns(3);
+		@include omega;
+		padding: 30px 0;
+		
+		@include media($tablet){
+			@include span-columns(8);
+		}
+		
+	}
+}

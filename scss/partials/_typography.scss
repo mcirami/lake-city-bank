@@ -1,0 +1,9 @@
+// typography baselines and @font face setups
+
+h4 {
+	$font-family: $helvetica;
+}
+
+h1, h2, h3, p {
+	@include sanchez;
+}

@@ -1,0 +1,267 @@
+.sidebar {
+	
+	.textwidget {
+	
+		img {
+			width: 100%;
+			height: auto;
+		}
+	
+	}
+	
+	.widget {
+		margin-bottom: 15px;
+	}
+	
+	.green_scheme {
+		
+		.widget-title {
+			background-color: $green;
+		}
+	}
+	
+	.blue_scheme {
+		
+		.widget-title {
+			background-color: $blue;
+		}
+	}
+	
+	.orange_scheme {
+		
+		.widget-title {
+			background-color: $orange;
+		}
+	}
+	
+	.purple_scheme {
+		
+		.widget-title {
+			background-color: $purple;
+			width: 100%;
+		}
+
+		.menu-about-container {
+			display: inline-block;
+			width: 100%;
+		}
+	}
+	
+	.dark_blue_scheme {
+		
+		.widget-title {
+			background-color: $darkBlue;
+		}
+	}
+	
+	.widget_nav_menu {
+		
+		h3 {
+			@include sanchez;
+			color: $white;
+			text-transform: uppercase;
+			font-size: 16px;
+			text-align: center;
+			margin: 0;
+			padding: 20px 0;
+		}
+		
+		.menu {
+			list-style: none;
+			background: url('../images/sidebar-menu-bg.jpg') no-repeat;
+			background-size: cover;
+			padding: 20px;
+			
+			li {
+				padding-left: 20px;
+				line-height: 1.8;
+				
+				a {
+					@include sanchez;
+					color: $charcoal;
+					font-size: 16px;
+					line-height: 1.2;
+				}
+				
+				.sub-menu {
+					list-style: none;
+					display: none;
+					
+					li {
+						
+						a {
+							@include sanchezItalic;
+							color: $gray;
+						}
+					}
+				}
+			}
+			
+			.menu-item-has-children {
+				background-image: url('../images/plus-sign.png');
+				background-repeat: no-repeat;
+				background-position: 0 5px;
+
+				@include media($mobile) {
+					background-image: none;
+				}
+				
+				&:hover {
+					cursor: pointer;
+
+					@include media($mobile) {
+						cursor: default;
+					}
+				}
+			}
+			
+			.open {
+				background-image: url('../images/minus-sign.png');
+			}
+		}
+	}
+
+	#blank-cta-template {
+		
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+
+aside.sidebar.sidebar_search {
+	@include sanchez;
+	padding: 0;
+
+	.widget-title {
+		font-size: 16px;
+		padding: 8px 15px;
+	}
+
+	label {
+		display: block;
+		width: 100%;
+		padding: 0 10px 10px;
+	}
+
+	.sidebar_search_container {
+		display: inline-block;
+		width: 100%;
+		background: $white;
+		padding: 20px 20px 40px 10px;
+
+		.search_dropdown {
+			margin-bottom: 20px;
+
+			select {
+				width: 100%;
+			}
+		}
+
+		.blog_search_form {
+			width: 100%;
+
+			.blog_search {
+				width: 100%;
+				padding: 10px;
+			}
+		}
+
+		.dd-container {
+			width: 100% !important;
+
+			.dd-select {
+				width: 100% !important;
+
+				.dd-selected {
+					height: 35px;
+					padding: 5px;
+
+					.dd-selected-text {
+						color: $charcoal;
+					}
+				}
+
+				.dd-pointer-down {
+					border-top: solid 5px $charcoal !important;
+				}
+			}
+
+			.dd-options {
+				width: 100% !important;
+
+				.dd-option-text {
+					color: $charcoal;
+					padding: 0 5px;
+				}
+			}
+		}
+	}
+}
+
+aside#text-5 {
+  width: 100%;
+
+  @include media($tablet) {
+	width: 100%;
+  }
+
+  h3.widget-title {
+	display: none;
+  }
+
+	.textwidget {
+	  @include media($tablet) {
+		float: none;
+		width: 100%;
+	  }
+
+	  @include media($mobile) {
+		text-align: center;
+	  }
+
+	  .sidebar_header {
+		background-color: $darkBlue;
+		padding: 10px 20px;
+		text-align: center;
+
+		h3 {
+		  @include sanchez;
+		  font-size: 16px;
+		  color: $white;
+		  text-transform: uppercase;
+		  line-height: 1.2;
+		}
+	  }
+
+	  .sidebar_content {
+		background-color: $white;
+		padding: 30px;
+		margin-bottom: 30px;
+
+		span {
+		  @include gudea;
+		  text-transform: uppercase;
+		  color: $charcoal;
+		  font-size: 12px;
+		}
+
+		p {
+		  @include sanchez;
+		  color: $darkBlue;
+		  margin-bottom: 40px;
+		}
+
+		.location {
+		  width: 100%;
+		  
+		  a {
+			  color: $darkBlue;
+			  @include sanchez;
+		  }
+		  
+		}
+	  }
+	}
+  }
